@@ -46,7 +46,9 @@ app.*.map.json
 /android/app/release
 /android/key.properties
 
-
 *.VSCodeCounter
 /expense.jks
 android/app/google-services.json
+
+# FVM Version Cache
+.fvm/
