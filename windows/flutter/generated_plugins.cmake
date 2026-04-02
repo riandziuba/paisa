@@ -3,6 +3,11 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
+  dynamic_color
+  file_selector_windows
+  flutter_timezone
+  local_auth_windows
+  share_plus
   url_launcher_windows
 )
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_paisa/l10n/app_localizations.dart';
 import 'package:hive_flutter/adapters.dart';
 
 import '../../../common/constants/currency.dart';
@@ -31,7 +31,7 @@ class ExpenseTotalWidget extends StatelessWidget {
                 AppLocalizations.of(context)!.total,
                 style: Theme.of(context)
                     .textTheme
-                    .headline6
+                    .titleLarge
                     ?.copyWith(fontWeight: FontWeight.bold),
               ),
             ),

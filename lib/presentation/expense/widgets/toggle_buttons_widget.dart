@@ -58,7 +58,7 @@ class TransactionToggleButtonsState extends State<TransactionToggleButtons> {
                     ),
                     child: Text(
                       type.name(context),
-                      style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
                             color: colorOnPrimary,
                             fontWeight: FontWeight.w600,
                           ),

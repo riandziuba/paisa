@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_paisa/l10n/app_localizations.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../accounts/pages/accounts_page.dart';
@@ -92,11 +92,11 @@ class _LandingPageState extends State<LandingPage>
                 groupAlignment: -1,
                 leading: const WelcomeWidget(),
                 selectedLabelTextStyle: TextStyle(
-                  fontSize: Theme.of(context).textTheme.headline6?.fontSize,
+                  fontSize: Theme.of(context).textTheme.titleLarge?.fontSize,
                   fontWeight: FontWeight.bold,
                 ),
                 unselectedLabelTextStyle: TextStyle(
-                  fontSize: Theme.of(context).textTheme.headline6?.fontSize,
+                  fontSize: Theme.of(context).textTheme.titleLarge?.fontSize,
                   fontWeight: FontWeight.bold,
                 ),
                 onDestinationSelected: (index) {

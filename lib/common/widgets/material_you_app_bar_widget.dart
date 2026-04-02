@@ -9,7 +9,7 @@ AppBar materialYouAppBar(
     title: Text(title),
     titleTextStyle: Theme.of(context)
         .textTheme
-        .headline6
+        .titleLarge
         ?.copyWith(fontWeight: FontWeight.bold),
     backgroundColor: Colors.transparent,
     actions: actions ?? [],

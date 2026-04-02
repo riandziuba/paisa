@@ -62,7 +62,7 @@ class CardTypeButtonsState extends State<CardTypeButtons> {
                     ),
                     child: Text(
                       type.name,
-                      style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
                             color: colorOnPrimary,
                             fontWeight: FontWeight.w600,
                           ),

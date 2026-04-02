@@ -41,12 +41,12 @@ class ExpensItemWidget extends StatelessWidget {
               style: GoogleFonts.outfit(
                   textStyle: Theme.of(context)
                       .textTheme
-                      .headline6
+                      .titleLarge
                       ?.onSurface(context)),
             ),
             Text(
               date.substring(2, date.length),
-              style: Theme.of(context).textTheme.bodyText1?.onSurface(context),
+              style: Theme.of(context).textTheme.bodyLarge?.onSurface(context),
             ),
           ],
         ),

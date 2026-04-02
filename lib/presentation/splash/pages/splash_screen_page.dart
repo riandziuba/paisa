@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_paisa/l10n/app_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -55,7 +55,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
                       AppLocalizations.of(context)!.selecteCountry,
                       style: Theme.of(context)
                           .textTheme
-                          .headline5
+                          .headlineSmall
                           ?.copyWith(fontWeight: FontWeight.bold),
                     ),
                   ),
@@ -135,7 +135,7 @@ class LocaleGridView extends StatelessWidget {
                   child: Text(
                     format.currencySymbol,
                     style: GoogleFonts.manrope(
-                      textStyle: Theme.of(context).textTheme.headline6,
+                      textStyle: Theme.of(context).textTheme.titleLarge,
                     ),
                   ),
                 ),

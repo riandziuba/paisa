@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_paisa/l10n/app_localizations.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -60,7 +60,7 @@ class WelcomeWidget extends StatelessWidget {
                     padding: const EdgeInsets.all(12.0),
                     child: Text(
                       AppLocalizations.of(context)!.welcomeMessage(name),
-                      style: Theme.of(context).textTheme.headline5?.copyWith(),
+                      style: Theme.of(context).textTheme.headlineSmall?.copyWith(),
                     ),
                   ),
                 ),

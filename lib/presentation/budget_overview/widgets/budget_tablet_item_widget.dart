@@ -42,7 +42,7 @@ class BudgetItemTableWidget extends StatelessWidget {
               child: Text(
                 category.name,
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.headline5?.copyWith(
+                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                       color: Theme.of(context).colorScheme.onSurface,
                     ),
               ),
@@ -67,7 +67,7 @@ class BudgetItemTableWidget extends StatelessWidget {
               child: Text(
                 totalExpens(expenses),
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.headline5?.copyWith(
+                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                       color: Theme.of(context).colorScheme.onSurface,
                     ),
               ),

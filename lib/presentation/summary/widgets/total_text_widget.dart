@@ -29,7 +29,7 @@ class TotalTextWidget extends StatelessWidget {
         Text(
           value,
           style: GoogleFonts.manrope(
-            textStyle: Theme.of(context).textTheme.headline4?.copyWith(
+            textStyle: Theme.of(context).textTheme.headlineMedium?.copyWith(
                   color: Theme.of(context).colorScheme.onSurface,
                 ),
           ),

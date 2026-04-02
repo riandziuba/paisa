@@ -21,11 +21,11 @@ class UserNamePage extends StatelessWidget {
               children: [
                 Text(
                   'Hi',
-                  style: Theme.of(context).textTheme.headline4,
+                  style: Theme.of(context).textTheme.headlineMedium,
                 ),
                 Text(
                   'Welcome to Paise, What should we call you',
-                  style: Theme.of(context).textTheme.headline6,
+                  style: Theme.of(context).textTheme.titleLarge,
                 ),
                 const SizedBox(height: 16),
                 Form(

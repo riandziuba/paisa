@@ -1,8 +1,8 @@
 import 'package:flutter/services.dart';
-import 'package:local_auth/auth_strings.dart';
+import 'package:local_auth_android/local_auth_android.dart';
 import 'package:local_auth/local_auth.dart';
 
-const errorString = AndroidAuthMessages(
+const errorString =AndroidAuthMessages(
   signInTitle: "Authenticate for Login",
   cancelButton: 'Cancel',
   goToSettingsButton: 'Settings',
@@ -25,11 +25,15 @@ class LocalAuthApi {
     if (!isAvaliable) return false;
     try {
       return _auth.authenticate(
-        localizedReason: 'Scan',
-        useErrorDialogs: true,
-        stickyAuth: true,
-        androidAuthStrings: errorString,
-        biometricOnly: true,
+          localizedReason: 'Scan',
+          authMessages: [
+            errorString
+          ],
+          options: const AuthenticationOptions(
+            useErrorDialogs: true,
+            stickyAuth: true,
+            biometricOnly: true,
+          )
       );
     } on PlatformException catch (_) {
       return false;

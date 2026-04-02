@@ -1,7 +1,7 @@
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_paisa/l10n/app_localizations.dart';
 import 'package:hive_flutter/adapters.dart';
 
 import '../../../common/enum/box_types.dart';
@@ -111,7 +111,7 @@ class ColorSelectionWidgetState extends State<ColorSelectionWidget> {
               ListTile(
                 title: Text(
                   AppLocalizations.of(context)!.pickColor,
-                  style: Theme.of(context).textTheme.headline6,
+                  style: Theme.of(context).textTheme.titleLarge,
                 ),
               ),
               if (!isAndroid12) const DynamicColorSwitchWidget(),

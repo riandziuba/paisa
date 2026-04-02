@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:csv/csv.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_paisa/l10n/app_localizations.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 
@@ -44,7 +44,7 @@ class ExportExpensesWidgetState extends State<ExportExpensesWidget> {
     final path = "${directory.path}/paisa-expense-manager.csv";
     final file = File(path);
     await file.writeAsString(csvData);
-    Share.shareFiles([path],
+    Share.shareXFiles([XFile(path)],
         subject: AppLocalizations.of(context)!.exportExpenses);
   }
 }

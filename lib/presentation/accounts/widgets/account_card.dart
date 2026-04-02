@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_paisa/l10n/app_localizations.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -126,12 +126,12 @@ class _AccountCardState extends State<AccountCard>
                     colors: [
                       Theme.of(context)
                           .textTheme
-                          .subtitle1!
+                          .titleMedium!
                           .color!
                           .withOpacity(0.1),
                       Theme.of(context)
                           .textTheme
-                          .subtitle1!
+                          .titleMedium!
                           .color!
                           .withOpacity(0.05),
                     ],
@@ -143,12 +143,12 @@ class _AccountCardState extends State<AccountCard>
                     colors: [
                       Theme.of(context)
                           .textTheme
-                          .subtitle1!
+                          .titleMedium!
                           .color!
                           .withOpacity(0.5),
                       Theme.of(context)
                           .textTheme
-                          .subtitle1!
+                          .titleMedium!
                           .color!
                           .withOpacity(0.5),
                     ],
@@ -164,7 +164,7 @@ class _AccountCardState extends State<AccountCard>
                           children: [
                             Text(
                               widget.bankName.toUpperCase(),
-                              style: Theme.of(context).textTheme.subtitle1,
+                              style: Theme.of(context).textTheme.titleMedium,
                             ),
                             Icon(widget.cardType.icon),
                           ],
@@ -176,7 +176,7 @@ class _AccountCardState extends State<AccountCard>
                               text: '**** ',
                               style: GoogleFonts.jetBrainsMono(
                                 textStyle:
-                                    Theme.of(context).textTheme.headline5,
+                                    Theme.of(context).textTheme.headlineSmall,
                               ),
                               children: [
                                 const TextSpan(text: '**** '),
@@ -197,7 +197,7 @@ class _AccountCardState extends State<AccountCard>
                                     style: TextStyle(
                                         color: Theme.of(context)
                                             .textTheme
-                                            .subtitle1!
+                                            .titleMedium!
                                             .color!
                                             .withOpacity(0.5),
                                         fontSize: 9,
@@ -207,7 +207,7 @@ class _AccountCardState extends State<AccountCard>
                                     widget.cardHolder.toUpperCase(),
                                     style: Theme.of(context)
                                         .textTheme
-                                        .headline6
+                                        .titleLarge
                                         ?.copyWith(
                                           fontWeight: FontWeight.w600,
                                         ),
@@ -291,12 +291,12 @@ class _AccountCardState extends State<AccountCard>
                   colors: [
                     Theme.of(context)
                         .textTheme
-                        .subtitle1!
+                        .titleMedium!
                         .color!
                         .withOpacity(0.1),
                     Theme.of(context)
                         .textTheme
-                        .subtitle1!
+                        .titleMedium!
                         .color!
                         .withOpacity(0.05),
                   ],
@@ -308,12 +308,12 @@ class _AccountCardState extends State<AccountCard>
                   colors: [
                     Theme.of(context)
                         .textTheme
-                        .subtitle1!
+                        .titleMedium!
                         .color!
                         .withOpacity(0.5),
                     Theme.of(context)
                         .textTheme
-                        .subtitle1!
+                        .titleMedium!
                         .color!
                         .withOpacity(0.5),
                   ],
@@ -329,7 +329,7 @@ class _AccountCardState extends State<AccountCard>
                         children: [
                           Text(
                             widget.bankName,
-                            style: Theme.of(context).textTheme.headline5,
+                            style: Theme.of(context).textTheme.headlineSmall,
                           ),
                           Icon(widget.cardType.icon, size: 32),
                         ],
@@ -338,7 +338,7 @@ class _AccountCardState extends State<AccountCard>
                         text: TextSpan(
                           text: '**** ',
                           style: GoogleFonts.jetBrainsMono(
-                            textStyle: Theme.of(context).textTheme.headline4,
+                            textStyle: Theme.of(context).textTheme.headlineMedium,
                           ),
                           children: [
                             const TextSpan(text: '**** '),
@@ -353,10 +353,10 @@ class _AccountCardState extends State<AccountCard>
                           Text(
                             AppLocalizations.of(context)!.successAddCategory,
                             style:
-                                Theme.of(context).textTheme.caption?.copyWith(
+                                Theme.of(context).textTheme.bodySmall?.copyWith(
                                       color: Theme.of(context)
                                           .textTheme
-                                          .subtitle1!
+                                          .titleMedium!
                                           .color!
                                           .withOpacity(0.5),
                                       fontWeight: FontWeight.bold,
@@ -365,7 +365,7 @@ class _AccountCardState extends State<AccountCard>
                           Text(
                             widget.cardHolder.toUpperCase(),
                             style:
-                                Theme.of(context).textTheme.headline6?.copyWith(
+                                Theme.of(context).textTheme.titleLarge?.copyWith(
                                       fontWeight: FontWeight.bold,
                                     ),
                           )

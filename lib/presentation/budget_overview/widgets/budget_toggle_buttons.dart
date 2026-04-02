@@ -30,7 +30,7 @@ class _BudgetToggleButtonsState extends State<BudgetToggleButtons> {
       },
       borderRadius: BorderRadius.circular(16),
       selectedColor: Theme.of(context).colorScheme.onPrimary,
-      textStyle: Theme.of(context).textTheme.subtitle1,
+      textStyle: Theme.of(context).textTheme.titleMedium,
       children: const [
         Padding(
           padding: EdgeInsets.all(16.0),

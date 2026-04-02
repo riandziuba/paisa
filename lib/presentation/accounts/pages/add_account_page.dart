@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_paisa/l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -127,7 +127,7 @@ class AddAccountPageState extends State<AddAccountPage> {
                 ),
                 child: Text(
                   AppLocalizations.of(context)!.addCard,
-                  style: Theme.of(context).textTheme.headline6?.copyWith(
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
                         color: context.onPrimary,
                         fontWeight: FontWeight.bold,
                       ),
@@ -304,7 +304,7 @@ class AddAccountPageState extends State<AddAccountPage> {
                                     AppLocalizations.of(context)!.addCard,
                                     style: Theme.of(context)
                                         .textTheme
-                                        .headline6
+                                        .titleLarge
                                         ?.copyWith(
                                           color: context.onPrimary,
                                           fontWeight: FontWeight.bold,

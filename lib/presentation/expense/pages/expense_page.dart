@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_paisa/l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -214,7 +214,7 @@ class _ExpensePageState extends State<ExpensePage> {
                   : AppLocalizations.of(context)!.updateExpense,
               style: Theme.of(context)
                   .textTheme
-                  .headline6
+                  .titleLarge
                   ?.copyWith(fontWeight: FontWeight.w700),
             ),
             actions: [
@@ -309,7 +309,7 @@ class _ExpensePageState extends State<ExpensePage> {
             : AppLocalizations.of(context)!.update,
         style: Theme.of(context)
             .textTheme
-            .headline6
+            .titleLarge
             ?.copyWith(fontWeight: FontWeight.w700, color: context.onPrimary),
       ),
     );

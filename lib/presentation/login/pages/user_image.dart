@@ -28,11 +28,11 @@ class _UserImagePageState extends State<UserImagePage> {
               children: [
                 Text(
                   'Image',
-                  style: Theme.of(context).textTheme.headline4,
+                  style: Theme.of(context).textTheme.headlineMedium,
                 ),
                 Text(
                   'Let\'s set image for you',
-                  style: Theme.of(context).textTheme.headline6,
+                  style: Theme.of(context).textTheme.titleLarge,
                 ),
                 const SizedBox(height: 16),
                 UserImageWidget(

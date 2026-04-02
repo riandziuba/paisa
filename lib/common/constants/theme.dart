@@ -289,8 +289,8 @@ AppBarTheme appBarTheme(Brightness brightness) {
   );
 }
 
-DialogTheme dialogTheme() {
-  return DialogTheme(
+DialogThemeData dialogTheme() {
+  return DialogThemeData(
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(24),
     ),

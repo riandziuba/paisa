@@ -1,5 +1,5 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:flutter_native_timezone/flutter_native_timezone.dart';
+import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 
@@ -8,7 +8,7 @@ import '../../main.dart';
 
 const _androidDetails = AndroidNotificationDetails(
   'pasia_channel_id',
-  'Reminder noticaitions',
+  'Reminder notifications',
   channelDescription: 'Show notifications whenever possible to add expense',
   priority: Priority.low,
   importance: Importance.high,
@@ -22,19 +22,22 @@ class NotificationService {
 
   Future<void> init() async {
     const androidSettings = AndroidInitializationSettings('app_icon');
-    const iosSettings = IOSInitializationSettings();
+    const iosSettings = DarwinInitializationSettings();
     const initializationSettings = InitializationSettings(
       android: androidSettings,
       iOS: iosSettings,
     );
 
     tz.initializeTimeZones();
-    final String timeZoneName = await FlutterNativeTimezone.getLocalTimezone();
-    tz.setLocalLocation(tz.getLocation(timeZoneName));
+    final timeZoneInfo = await FlutterTimezone.getLocalTimezone();
+    tz.setLocalLocation(tz.getLocation(timeZoneInfo.identifier));
+
 
     await notification.initialize(
       initializationSettings,
-      onSelectNotification: selectNotification,
+      onDidReceiveNotificationResponse: (NotificationResponse response) {
+        selectNotification(response.payload);
+      },
     );
   }
 
@@ -52,30 +55,28 @@ class NotificationService {
     );
   }
 
-  Future<void> sechuldeNotification() async {
+  Future<void> scheduleNotification() async {
     await notification.zonedSchedule(
       0,
       'Add expense',
       'Don\'t forgot to add your daily expenses',
-      _nextInstanceOfEightPM(const Time(20)),
+      _nextInstanceOfEightPM(),
       _notificationDetails,
-      androidAllowWhileIdle: true,
+      androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
       uiLocalNotificationDateInterpretation:
-          UILocalNotificationDateInterpretation.absoluteTime,
+      UILocalNotificationDateInterpretation.absoluteTime,
       matchDateTimeComponents: DateTimeComponents.time,
     );
   }
 
-  tz.TZDateTime _nextInstanceOfEightPM(Time time) {
+  tz.TZDateTime _nextInstanceOfEightPM() {
     final now = tz.TZDateTime.now(tz.local);
     tz.TZDateTime scheduledDate = tz.TZDateTime(
       tz.local,
       now.year,
       now.month,
       now.day,
-      time.hour,
-      time.minute,
-      time.second,
+      20, // 8 PM
     );
     return scheduledDate.isBefore(now)
         ? scheduledDate.add(const Duration(days: 1))

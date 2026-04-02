@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_paisa/l10n/app_localizations.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:collection/collection.dart';
 import '../../../app/routes.dart';
@@ -70,7 +70,7 @@ class _SelectedAccountState extends State<SelectedAccount> {
                   padding: const EdgeInsets.all(16.0),
                   child: Text(
                     AppLocalizations.of(context)!.selectAccount,
-                    style: Theme.of(context).textTheme.headline6?.copyWith(
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
                           fontWeight: FontWeight.bold,
                           color:
                               Theme.of(context).colorScheme.onPrimaryContainer,
@@ -112,7 +112,7 @@ class _SelectedAccountState extends State<SelectedAccount> {
                               AppLocalizations.of(context)!.selectAccount,
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline6
+                                  .titleLarge
                                   ?.copyWith(fontWeight: FontWeight.bold),
                             ),
                           ),
@@ -218,7 +218,7 @@ class SelectedItemState extends State<SelectedItem> {
                       padding: const EdgeInsets.symmetric(horizontal: 16),
                       child: Text(
                         account.name,
-                        style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                        style: Theme.of(context).textTheme.titleMedium?.copyWith(
                               color: Theme.of(context).colorScheme.onSurface,
                               fontWeight: FontWeight.bold,
                             ),
@@ -233,7 +233,7 @@ class SelectedItemState extends State<SelectedItem> {
                       ),
                       child: Text(
                         account.bankName,
-                        style: Theme.of(context).textTheme.bodyText1,
+                        style: Theme.of(context).textTheme.bodyLarge,
                       ),
                     ),
                   ],

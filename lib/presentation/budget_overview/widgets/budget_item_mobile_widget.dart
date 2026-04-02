@@ -36,7 +36,7 @@ class BudgetItemMobileWidget extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Text(
                 category.name,
-                style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                style: Theme.of(context).textTheme.titleMedium?.copyWith(
                       color: Theme.of(context).colorScheme.onSurface,
                     ),
                 textAlign: TextAlign.center,
@@ -66,7 +66,7 @@ class BudgetItemMobileWidget extends StatelessWidget {
               child: Text(
                 totalExpens(expenses),
                 style: GoogleFonts.manrope(
-                  textStyle: Theme.of(context).textTheme.bodyText1?.copyWith(
+                  textStyle: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         color: Theme.of(context).colorScheme.onSurface,
                       ),
                 ),

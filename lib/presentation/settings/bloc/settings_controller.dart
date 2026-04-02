@@ -29,7 +29,7 @@ class SettingsController with ChangeNotifier {
     showNotificatons = isOn;
     notifyListeners();
     if (isOn) {
-      locator.get<NotificationService>().sechuldeNotification();
+      locator.get<NotificationService>().scheduleNotification();
     } else {
       locator.get<NotificationService>().notification.cancelAll();
     }

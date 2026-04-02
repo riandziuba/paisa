@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_paisa/l10n/app_localizations.dart';
 
 import '../../../common/enum/theme_mode.dart';
 import '../../../di/service_locator.dart';
@@ -83,7 +83,7 @@ class ThemeModeWidgetState extends State<ThemeModeWidget> {
           ListTile(
             title: Text(
               AppLocalizations.of(context)!.theme,
-              style: Theme.of(context).textTheme.headline6,
+              style: Theme.of(context).textTheme.titleLarge,
             ),
           ),
           ...ThemeMode.values
